@@ -15,7 +15,11 @@
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
-            "group": "build",
+            // "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "problemMatcher": {
                 "fileLocation": [
                     "relative",
@@ -58,7 +62,11 @@
         {
             "label": "execute",
             "command": "cmd",
-            "group": "test",
+            // "group": "test",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
             "args": [
                 "/C",
                 "${fileDirname}\\${fileBasenameNoExtension}"
